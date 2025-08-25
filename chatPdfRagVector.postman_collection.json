@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "d25a616e-8c34-4650-9c55-99ca006fb9e1",
+		"name": "chatPdfRagVector",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29504922",
+		"_collection_link": "https://crimson-moon-345579.postman.co/workspace/Team-Workspace~b5926d93-6e1a-4a7a-804a-66a7a035d79c/collection/29504922-d25a616e-8c34-4650-9c55-99ca006fb9e1?action=share&source=collection_link&creator=29504922"
+	},
+	"item": [
+		{
+			"name": "pdf upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "pdf",
+							"type": "file",
+							"src": "/home/saheli/Downloads/Saheli_Paul_AI_Backend_Resume.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chat",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/chat?question=socketIO",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"chat"
+					],
+					"query": [
+						{
+							"key": "question",
+							"value": "socketIO"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
